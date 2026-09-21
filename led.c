@@ -25,19 +25,20 @@ IOPIN is to decide read/write mode;
 For example to use pin 0, we need to set P0.0 its decimal value is 1    
 For pins 0 and 1 we need to set P0.0 and P0.1 its decimal value is 3    
 Similarly for pins 0 to 7 we need to set all pins from P0.0 TO P0.7 its decimal value is 255
+
 ---------------------------------------------------------------------------------------*/
 
 #include<lpc21xx.h>
 #include "header.h"
-#define LED 7 // Macro for pins P0.1, P0.1 and P0.3 // Change the value of macro if LEDs are connected to different pins
+#define LED 7 // Macro for pins P0.1, P0.1 and P0.3 //Change the value of macro if LEDs are connected to different pins
 int main()
 {
-IODIR0=LED;   // Sets P0.1 P0.2 AND P0.3 as output direction
+IODIR0=LED;   // Sets P0.1 P0.2 and P0.3 as output direction
 while(1)      // Infinite loop
 {
-IOSET0=LED;   // Sets P0.1 P0.2 AND P0.3 LOW and turns ON the LEDs
+IOSET0=LED;   // Sets P0.1 P0.2 and P0.3 HIGH and turns ON the LEDs
 delay_ms(500);
-IOCLR0=LED;   // Sets P0.1 P0.2 AND P0.3 LOW and turns OFF the LEDs
+IOCLR0=LED;   // Sets P0.1 P0.2 and P0.3 LOW and turns OFF the LEDs
 delay_ms(500);
 }
 }
