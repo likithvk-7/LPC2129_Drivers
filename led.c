@@ -30,7 +30,7 @@ Similarly for pins 0 to 7 we need to set all pins from P0.0 TO P0.7 its decimal 
 
 #include<lpc21xx.h>
 #include "header.h"
-#define LED 7 // Macro for pins P0.1, P0.1 and P0.3 //Change the value of macro if LEDs are connected to different pins
+#define LED 7 // Macro for pins P0.1, P0.1 and P0.3 // Change the value of macro if LEDs are connected to different pins
 int main()
 {
 IODIR0=LED;   // Sets P0.1 P0.2 and P0.3 as output direction
